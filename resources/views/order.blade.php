@@ -11,10 +11,41 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1" class="form-label">Payment Method: </label> <br>
-              <input type="radio" value="cash" name="payment"> <span>BCA</span> <br>
-              <input type="radio" value="cash" name="payment"> <span>Mandiri</span> <br>
-              <input type="radio" value="cash" name="payment"> <span>COD</span>
+              <input type="radio" value="cash" name="payment"> <span>QR Code</span> <br>
+              {{-- <input type="radio" value="cash" name="payment"> <span>Mandiri</span> <br> --}}
+              {{-- <input type="radio" value="cash" name="payment"> <span>COD</span> --}}
             </div>
+            {{-- <form-group>
+               <button type="button" class="btn btn-dark mb-3" data-toggle="modal" data-target="#myModal">
+                  QRIS
+               </button>
+               <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Scan Pembayaran</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        {!! QrCode::size(450)->generate('http://127.0.0.1:8000/my-orders') !!}
+                        <div id="bottomdiv">
+                           <p class="mytext2"><span id="countdown" class="timer"></span></p>
+                         </div>
+                      </div>
+                      
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-dark btn-block" data-dismiss="modal">OK</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+            </form-group> --}}
             <button type="submit" class="btn btn-dark w-100">ORDER NOW</button>
          </form>
       </div>
@@ -28,7 +59,7 @@
                         Amount
                      </div>
                      <div class="col">
-                        $ {{ $total }}
+                        Rp. {{ $total }}
                      </div>
                   </div>
                </div>
@@ -38,7 +69,7 @@
                         Tax
                      </div>
                      <div class="col">
-                        $ 0
+                        Rp. 0
                      </div>
                   </div>
                </div>
@@ -48,7 +79,7 @@
                         Shipping
                      </div>
                      <div class="col">
-                        $ 7
+                        Rp. 7
                      </div>
                   </div>
                </div>
@@ -58,7 +89,7 @@
                         Total Amount
                      </div>
                      <div class="col">
-                        $ {{$total + 7}}
+                        Rp. {{$total + 7}}
                      </div>
                   </div>
                </div>

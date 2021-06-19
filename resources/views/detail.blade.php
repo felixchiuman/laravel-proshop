@@ -12,14 +12,14 @@
                <h2>{{ $product->name }}</h2>
             </li>
             <li class="list-group-item">
-               Price: ${{ $product->price }}
+               Price: Rp. {{ $product->price }}
             </li>
             <li class="list-group-item">
                Description: {{ $product->description }}
             </li>
-            <li class="list-group-item">
+            {{-- <li class="list-group-item">
                {!! QrCode::size(100)->generate(Request::url()) !!}
-            </li>
+            </li> --}}
             <li class="list-group-item">
                <form action="/add-to-cart" method="POST">
                   @csrf

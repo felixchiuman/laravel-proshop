@@ -34,3 +34,4 @@ Route::get('/remove/{id}', [ProductController::class, 'removeCart']);
 Route::get('/order', [ProductController::class, 'order']);
 Route::get('/my-orders', [ProductController::class, 'myOrders']);
 Route::post('/placeorder', [ProductController::class, 'placeorder']);
+Route::view('/payment-success', [ProductController::class, 'payment']);

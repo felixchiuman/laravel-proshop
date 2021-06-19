@@ -13,7 +13,7 @@
                      <a href="detail/{{ $data->id }}">
                         <p class="card-title" style="color: #333;">{{ $data->name }}</p>
                      </a>
-                     <h5 class="card-text">$ {{ $data->price }}</h5>
+                     <h5 class="card-text">Rp. {{ $data->price }}</h5>
                      </div>
                   </div>
             </div>

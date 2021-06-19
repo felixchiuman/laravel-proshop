@@ -75,12 +75,12 @@ class ProductController extends Controller
             $order->user_id = $cart['user_id'];
             $order->status = 'pending';
             $order->payment_method = $req->payment;
-            $order->payment_status = 'pending';
+            $order->payment_status = 'success';
             $order->address = $req->address;
             $order->save();
             Cart::where('user_id', $userId)->delete();
         }
-        return redirect('/');
+        return redirect('/payment-success')->with('success', 'Pembayaran Berhasil');
     }
     function myOrders()
     {

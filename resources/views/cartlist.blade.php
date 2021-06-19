@@ -22,7 +22,7 @@ if(Session::has('user'))
                   <div class="col-md-4">
                      <a href="/detail/{{ $item->id }}" style="text-transform: none;">{{ $item->name }}</a>
                   </div>
-                  <div class="col-md-2">${{ $item->price }}</div>
+                  <div class="col-md-2">Rp. {{ $item->price }}</div>
                   <div class="col-md-2">
                      <a href="/remove/{{$item->cart_id}}"><i class="fas fa-trash text-danger"></i></a>
                   </div>
