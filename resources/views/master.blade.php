@@ -103,12 +103,4 @@
    var countdownTimer = setInterval('secondPassed()', 1000);
 </script> --}}
 
-<script>
-   setTimeout(function myFunction() {
-      alert('Pembayaran Berhasil');
-      window.location.href = '/my-orders';
-   }, 10000);
-   // function myFunction() {
-   // }
-</script>
 </html>
